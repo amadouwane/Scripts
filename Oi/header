@@ -1,0 +1,19 @@
+#!/usr/bin/ksh
+################################################################################
+#Author:Amadou Wane
+#Date:09/21/09
+#Copyright:PHNS CORP.
+#Usage:
+#Purpose:
+################################################################################
+export LOGDIR=/home/oracle/log
+export TODAY=`date +%m%d%y-%H%M%S`
+export ORACLE_HOME=/u01/oracle/product/10.2.0.3/db
+export LOGFILE=/home/oracle/log/getTbspaceSize.$TODAY.log
+export SQLPLUS=$ORACLE_HOME/bin/sqlplus
+export ORACLE_SID=prod1
+export ORACLE_BASE=/u01/oracle/product
+export HOME=/home/oracle
+export TERM=xterm
+export REPORT_DIR=/home/oracle/reports
+. $HOME/.profile
