@@ -1,1 +1,20 @@
-exec 3<>/dev/tcp/localhost/22
+#!/bin/bash
+ 
+##########################################################
+# Config
+ 
+NICK="mynick"
+SERVER="irc.freenode.net"
+PORT=6667
+CHANNEL="#bashirc"
+ 
+##########################################################
+# Main
+ 
+exec 3<>/dev/tcp/${SERVER}/${PORT} #Create the socket
+echo "NICK ${NICK}" >&3 #Write to the socket
+echo "USER ${NICK} 8 * : ${NICK}" >&3 #Write to the socket
+echo "JOIN ${CHANNEL}" >&3
+cat <&3
+ 
+exit $?
