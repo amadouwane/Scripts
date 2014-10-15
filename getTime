@@ -1,0 +1,27 @@
+getTime()
+{
+#First quater of the hour
+if [ $MIN -eq 15 ]
+then
+  export TIMESTAMP_B="$DAY-$MONTH-$YEAR $HOUR.00.00.000 $MERIDIAN"
+  export TIMESTAMP_E="$DAY-$MONTH-$YEAR $HOUR.15.59.000 $MERIDIAN"
+fi
+#Second quater of the hour
+if [ $MIN -eq 30 ]
+then
+  export TIMESTAMP_B="$DAY-$MONTH-$YEAR $HOUR.16.00.000 $MERIDIAN"
+  export TIMESTAMP_E="$DAY-$MONTH-$YEAR $HOUR.30.59.000 $MERIDIAN"
+fi
+#Third quater of the hour
+if [ $MIN -eq 45 ]
+then
+  export TIMESTAMP_B="$DAY-$MONTH-$YEAR $HOUR.31.00.000 $MERIDIAN"
+  export TIMESTAMP_E="$DAY-$MONTH-$YEAR $HOUR.45.59.000 $MERIDIAN"
+fi
+#Fourth quater of the hour
+if [ $MIN -eq 59 ]
+then
+  export TIMESTAMP_B="$DAY-$MONTH-$YEAR $HOUR.46.00.000 $MERIDIAN"
+  export TIMESTAMP_E="$DAY-$MONTH-$YEAR $HOUR.59.59.000 $MERIDIAN"
+fi
+}
