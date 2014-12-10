@@ -1,1 +1,1 @@
-ls -l --color /var/lib/jbossas/server/default/deploy|grep "\->"|awk -F" " '{print $9, $10, $11}'
+ls -l --color /var/lib/jbossas/server/default/deploy|grep "\->"|awk -F" " '{print $6, $7, $8, $9, $10, $11}'
