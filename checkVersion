@@ -1,0 +1,33 @@
+export APPDIR=/app/dre/applications
+
+checkNonPrefNetworkNotif()
+{
+echo ""
+ls -t $APPDIR/ |grep viva-NonPrefNetworkNotif-* |head -2
+}
+#------------------------------------------------------------------------------
+checkSdpCore()
+{
+echo ""
+ls -t $APPDIR/ |grep viva-sdp-core-* |head -2
+}
+#------------------------------------------------------------------------------
+checkSdpsdm()
+{
+echo ""
+ls -t $APPDIR/ |grep viva-sdp-dsm-*|head -2
+}
+#------------------------------------------------------------------------------
+checkSdpudpgw()
+{
+echo ""
+ls -t $APPDIR/ |grep viva-sdp-UdpGateway-*|head -2
+}
+#------------------------------------------------------------------------------
+############
+#MAIN BODY
+############
+checkNonPrefNetworkNotif
+checkSdpCore
+checkSdpsdm
+checkSdpudpgw
