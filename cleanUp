@@ -1,0 +1,10 @@
+cleanUp()
+{
+for i in `cat "/home/dreadmin/scripts/env.lst"`
+do
+if [ $APP_DIR/$NEW_MODULE/bin/$i ]
+then
+sudo -E -u jboss rm -f $APP_DIR/$NEW_MODULE/bin/$i
+fi
+done
+}
